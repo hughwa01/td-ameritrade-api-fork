@@ -44,10 +44,10 @@ class TdCredentials():
         self._refresh_token_expiration_time = 0
         self._access_token_expiration_time = 0
 
-        self.resource_url = 'https://api.tdameritrade.com/'
+        self.resource_url = 'https://api.schwabapi.com/trader'
         self.version = 'v1/'
-        self.token_endpoint = 'oauth2/token'
-        self.authorization_url = 'https://auth.tdameritrade.com/auth?'
+        self.token_endpoint = 'oauth/token'
+        self.authorization_url = 'https://api.schwabapi.com/v1/oauth/authorize?'
         self.authorization_code = ""
         self._loaded_from_file = False
         self._file_path = ""
@@ -151,7 +151,7 @@ class TdCredentials():
             >>> td_credential.refresh_token_expiration_time
         """
 
-        return self._refresh_token_expiration_time
+            return self._refresh_token_expiration_time
 
     @property
     def is_refresh_token_expired(self) -> bool:
@@ -509,7 +509,7 @@ class TdCredentials():
 
         # Make the request.
         response = requests.post(
-            url="https://api.tdameritrade.com/v1/oauth2/token",
+            url="https://api.schwabapi.com/trader/v1/oauth2/token",
             headers={
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -545,7 +545,7 @@ class TdCredentials():
 
         # Make the request.
         response = requests.post(
-            url="https://api.tdameritrade.com/v1/oauth2/token",
+            url="https://api.schwabapi.com/v1/oauth2/token",
             headers={
                 'Content-Type': 'application/x-www-form-urlencoded'
             },

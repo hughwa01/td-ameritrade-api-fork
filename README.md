@@ -16,7 +16,7 @@ TD Ameritrade accounts to manage trades, pull historical and real-time data, man
 their accounts, create and modify orders all using the Python programming language.
 
 To learn more about the TD Ameritrade API, please refer to
-the [official documentation](https://developer.tdameritrade.com/apis).
+the [official documentation](https://developer.schwab.com/products/trader-api--individual/details/specifications/Retail%20Trader%20API%20Production).
 
 ## Setup
 
@@ -108,10 +108,6 @@ td_client = TdAmeritradeClient(
 # Initialize the Quotes service.
 quote_service = td_client.quotes()
 
-# Grab a single quote.
-pprint(
-    quote_service.get_quote(instrument='AAPL')
-)
 
 # Grab multiple quotes.
 pprint(

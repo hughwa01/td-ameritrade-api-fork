@@ -26,6 +26,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+py_tda_api.egg-info
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -103,7 +104,7 @@ celerybeat.pid
 
 # Environments
 .env
-.venv
+.venvSchwabAPI
 env/
 venv/
 ENV/
@@ -133,3 +134,7 @@ vscode/
 config/
 .resources and notes/
 venv_test/
+
+# Wayne Folder
+.github
+.vscode

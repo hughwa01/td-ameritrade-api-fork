@@ -33,7 +33,7 @@ class TdAmeritradeSession():
         log_format = '%(asctime)-15s|%(filename)s|%(message)s'
 
         self.client: TdAmeritradeClient = td_client
-        self.resource_url = 'https://api.tdameritrade.com/'
+        self.resource_url = 'https://api.schwabapi.com/trader/'
         self.version = 'v1/'
 
         if not pathlib.Path('logs').exists():
